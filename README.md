@@ -9,9 +9,9 @@ Confident with:<br/>
 *`Git and git-flow`<br/>
 *`*nix CLI`<br/>
 *`Docker-compose`<br/>
-*`Managing a project`<br/>
-*`Elaborating complex conceprs in smol words`<br/>
-*`Planning`<br />
+*`Managing a digital product`<br/>
+*`Describing complex concepts with smol words`<br/>
+*`Planning`<br/>
 
 Can do well:<br/>
 *`Web/mobile applications`<br/>
