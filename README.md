@@ -7,6 +7,8 @@
 Confident with:<br/>
 *`Pretty much any python framework`<br/>
 *`Git and git-flow`<br/>
+*`*nix CLI`<br/>
+*`Docker-compose`<br/>
 *`Managing a project`<br/>
 *`Elaborating complex conceprs in smol words`<br/>
 *`Planning`<br />
