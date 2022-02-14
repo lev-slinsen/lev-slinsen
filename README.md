@@ -4,6 +4,7 @@
 
 `Lives around humans`
 
+
 Confident with:<br/>
 *`Pretty much any python framework`<br/>
 *`Git and git-flow`<br/>
@@ -31,3 +32,11 @@ Do for fun :P<br/>
 *`Ski`<br/>
 *`Warhammer 40k fan`<br/>
 <hr/>
+
+```python
+# If you would like to contact me
+def contacts():
+    email = 'lev_slinsen@protonmail.com'
+    telegram = '@lev_slinsen'
+    # yes, I know I'm a nerd -_-
+```
