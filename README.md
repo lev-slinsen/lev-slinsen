@@ -26,6 +26,8 @@ Experienced in:<br/>
 *`Semi-automated manufacturing`<br/>
 
 Do for fun :P<br/>
-*`Electronic music`<br/>
+*`Compose electronic music`<br/>
 *`Develop Discord and Telegram bots`<br/>
+*`Ski`<br/>
+*`Warhammer 40k fan`<br/>
 <hr/>
