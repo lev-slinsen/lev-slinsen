@@ -25,6 +25,7 @@ Experienced in:<br/>
 *`eCommerce`<br/>
 *`FinTech`<br/>
 *`Semi-automated manufacturing`<br/>
+*`Logistics`<br/>
 
 Do for fun :P<br/>
 *`Compose electronic music`<br/>
