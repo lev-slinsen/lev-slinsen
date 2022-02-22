@@ -6,6 +6,12 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 ```
 
+```python
+# Get now with django lib
+from django.utils import timezone
+now = timezone.now()
+```
+
 Getting a list of files as a single zip
 ```python
     @property
@@ -38,6 +44,12 @@ Getting a list of files as a single zip
 
 Pytest (class based):
 ```python
+from django.urls import reverse
+from rest_framework.test import APITestCase
+
+from ...models import Statement, StatementType, Service
+
+
 class ApiTest(APITestCase):
 
     def setUp(self):
