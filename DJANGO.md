@@ -34,3 +34,65 @@ Getting a list of files as a single zip
         response['Content-Disposition'] = 'attachment; filename={}'.format(zip_filename)
         return response
 ```
+### Testing
+
+Pytest (class based):
+```python
+class ApiTest(APITestCase):
+
+    def setUp(self):
+
+        # URLs
+        #
+        self.accept_statement = reverse('api:accept_statement')
+
+        # Users
+        #
+        self.user_admin = User.objects.create(username='admin', is_superuser=True)
+        self.user_1 = User.objects.create(username='user_1')
+
+        # Objects
+        #
+        self.service = Service.objects.create(position=1)
+        self.statement_type = StatementType.objects.create(position=1, service_id=self.service.id)
+        self.statement = Statement.objects.create(statement_type_id=self.statement_type.id, user=self.user_1)
+
+    def tearDown(self):
+        return super().tearDown()
+
+
+class TestGets(ApiTest):
+
+    def test__accept_statement__login_required(self):
+        res = self.client.get(self.accept_statement)
+
+        self.assertEqual(res.status_code, 401)
+        self.assertEqual(res.data, {'error': {'message': 'login required'}})
+
+    def test__accept_statement__id_required(self):
+        self.client.force_login(self.user_admin)
+        res = self.client.post(self.accept_statement)
+
+        self.assertEqual(res.status_code, 400)
+        self.assertEqual(res.data, {'error': {'message': 'id required'}})
+
+    def test__accept_statement__doesnt_exist(self):
+        self.client.force_login(self.user_admin)
+        data = {
+            'id': self.statement.id + 12
+        }
+        res = self.client.post(self.accept_statement, data, format='json')
+
+        self.assertEqual(res.status_code, 400)
+        self.assertEqual(res.data, {'error': {'message': 'no object with this id'}})
+
+    def test__accept_statement__validate_owner(self):
+        self.client.force_login(self.user_admin)
+        data = {
+            'id': self.statement.id
+        }
+        res = self.client.post(self.accept_statement, data, format='json')
+
+        self.assertEqual(res.status_code, 400)
+        self.assertEqual(res.data, {'error': {'message': 'object does not belong to the user'}})
+```
