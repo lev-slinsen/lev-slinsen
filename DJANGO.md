@@ -73,7 +73,7 @@ class ApiTest(APITestCase):
         return super().tearDown()
 
 
-class TestGets(ApiTest):
+class TestAcceptStatement(ApiTest):
 
     def test__accept_statement__login_required(self):
         res = self.client.get(self.accept_statement)
