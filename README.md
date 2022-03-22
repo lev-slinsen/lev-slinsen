@@ -11,7 +11,7 @@ Confident with:<br/>
 *`*nix CLI`<br/>
 *`Docker-compose`<br/>
 *`Managing a digital product`<br/>
-*`Describing complex concepts with smol words`<br/>
+*`Describing complex concepts with simple words`<br/>
 *`Planning`<br/>
 
 Can do well:<br/>
