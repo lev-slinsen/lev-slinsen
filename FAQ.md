@@ -4,8 +4,12 @@ I may also use this as a reference / reminder when working because human memory 
 
 ___
 
-### Python basics
+<br/>
+
+## Python basics
 [Glossary](https://docs.python.org/3/glossary.html)
+
+<br/>
 
 > #### Variable types
 
@@ -22,7 +26,8 @@ Mutable (can be changed):
 
 The `index()` method returns the position at the first occurrence of the specified value.
 
-<br /><br />
+<br/>
+
 > #### Iteration / Generation
 
 An [iterator](https://www.w3schools.com/python/python_iterators.asp) is an object that can be iterated upon and contains a countable number of values.  
@@ -33,7 +38,8 @@ Generator functions use `yield()` instead of `return()`, also `throw()` for erro
 On `yield()` statement, function execution is suspended yielded value returns to the caller but that doesn't stop the function.  
 Using generators on mutable objects saves memory.  
 
-<br /><br />
+<br/>
+
 > #### Lambda functions
 
 ##### [lambda](https://www.w3schools.com/python/python_lambda.asp) arguments : expression
@@ -50,7 +56,8 @@ multiply_by_two = multiply_by(2)
 print(multiply_by_two(11))
 ```
 
-<br /><br />
+<br/>
+
 > #### Decorators
 
 A [decorator](https://realpython.com/primer-on-python-decorators/) is a function that takes another function and extends the behavior of the latter function without explicitly modifying it.
@@ -69,7 +76,8 @@ def function():
 ```
 calling `function` actually returns `wrapper` of `decorator`.
 
-<br /><br />
+<br/>
+
 > #### Classes
 
 A [class](https://docs.python.org/3/tutorial/classes.html) is a user-defined blueprint or prototype from which objects are created.  
@@ -104,7 +112,8 @@ Built in functions (not all, just the most used ones):
 * `__repr__(self)` gives a developer-friendly representation.
 * `__cmp__(self, x)` compares instance to another object.
 
-<br /><br />
+<br/>
+
 > #### Asynchronicity
 
 **Concurrency** means executing multiple tasks at the same time but not necessarily simultaneously.  
@@ -116,19 +125,47 @@ Built in functions (not all, just the most used ones):
 That ensures **thread-safety** and prevents threads from **racing** to make changes to memory.
 
 To achieve **parallelism** Python has `multiprocessing` module which is not affected by the GIL.
-
-<br /><br />
 ___
 
-### Django
-`ORM`  
-`Models`  
-`Serializers`  
-`Views`  
-`URLs`  
-`Templates`  
-`Tests`  
-`Middlewares`  
+<br/>
+
+## Django
+
+> Models
+
+Many-to-many relation in DB:
+![many-to-many-db.png](resources/many-to-many-db.png)
+
+<br/>
+
+> Object related mapping (ORM) and QuerySets
+
+A [QuerySet](https://docs.djangoproject.com/en/dev/ref/models/querysets/) can be constructed, filtered, sliced, and generally passed around without actually hitting the database. No database activity actually occurs until you do something to evaluate the queryset.
+
+* `.aggregate()` calculates values for the entire queryset.  
+```py
+Book.objects.aggregate(average_price=Avg('price'))
+# {'average_price': 34.35}
+```
+
+* `.annotate()` calculates summary values for each item in the queryset.  
+```py
+q = Book.objects.annotate(num_authors=Count('authors'))
+q[0].num_authors
+# 2
+```
+
+* `.select_related(*fields)` works by creating an SQL join and including the fields of the related object in the SELECT statement.  
+For this reason, it gets the related objects in the same database query. However, it is limited to single-valued relationships - foreign key and one-to-one.
+```python
+Entry.objects.select_related('blog').get(id=5)
+blog = e.blog   # doesn't perform additional database request
+```
+
+* `.prefetch_related(*lookups)` does a separate lookup for each relationship, and does the ‘joining’ in Python. This allows it to prefetch many-to-many and many-to-one objects.
+___
+
+<br/>
 
 ### APIs
 `REST`  
