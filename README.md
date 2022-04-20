@@ -1,9 +1,8 @@
 # Lev Slinsen
 
-**the awesome backend developer**
+**The awesome backend developer**
 
-`Lives around humans`
-
+###### Lives around humans
 
 Confident with:<br/>
 * `Pretty much any python framework`<br/>
@@ -16,7 +15,6 @@ Confident with:<br/>
 
 Can do well:<br/>
 * `Web/mobile applications`<br/>
-* `IoT`<br/>
 * `CMS (or any other type of control panels)`<br/>
 * `Integrations with external services`<br/>
 * `Document flow and file operations`<br/>
@@ -24,7 +22,6 @@ Can do well:<br/>
 Experienced in:<br/>
 * `eCommerce`<br/>
 * `FinTech`<br/>
-* `Semi-automated manufacturing`<br/>
 * `Logistics`<br/>
 
 Do for fun :P<br/>
