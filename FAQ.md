@@ -11,7 +11,7 @@ ___
 
 <br/>
 
-> #### Variable types
+> #### `>>>` Variable types `<<<`
 
 Immutable (have to be re-written entirely):
 * [Booleans](https://www.w3schools.com/python/python_booleans.asp) `False`: `None`, `int(0)`, `str("")`, `tuple(())`, `list([])`, `dict({})`.
@@ -28,7 +28,7 @@ The `index()` method returns the position at the first occurrence of the specifi
 
 <br/>
 
-> #### Iteration / Generation
+> #### `>>>` Iteration / Generation `<<<`
 
 An [iterator](https://www.w3schools.com/python/python_iterators.asp) is an object that can be iterated upon and contains a countable number of values.  
 Technically, in Python, an iterator is an object which implements the iterator protocol, which consist of the methods `__iter__()` and `__next__()`.
@@ -40,7 +40,7 @@ Using generators on mutable objects saves memory.
 
 <br/>
 
-> #### Lambda functions
+> #### `>>>` Lambda functions `<<<`
 
 ##### [lambda](https://www.w3schools.com/python/python_lambda.asp) arguments : expression
 
@@ -58,7 +58,7 @@ print(multiply_by_two(11))
 
 <br/>
 
-> #### Decorators
+> #### `>>>` Decorators `<<<`
 
 A [decorator](https://realpython.com/primer-on-python-decorators/) is a function that takes another function and extends the behavior of the latter function without explicitly modifying it.
 
@@ -78,7 +78,7 @@ calling `function` actually returns `wrapper` of `decorator`.
 
 <br/>
 
-> #### Classes
+> #### `>>>` Classes `<<<`
 
 A [class](https://docs.python.org/3/tutorial/classes.html) is a user-defined blueprint or prototype from which objects are created.  
 Additional info on [class and static methods](https://realpython.com/instance-class-and-static-methods-demystified/).
@@ -114,7 +114,7 @@ Built in functions (not all, just the most used ones):
 
 <br/>
 
-> #### Asynchronicity
+> #### `>>>` Asynchronicity `<<<`
 
 **Concurrency** means executing multiple tasks at the same time but not necessarily simultaneously.  
 **Parallelism** means executing multiple tasks at the same time simultaneously. Can only be achieved with multiple cores.
@@ -131,14 +131,14 @@ ___
 
 ## Django
 
-> Models
+> #### `>>>` Models `<<<`
 
 Many-to-many relation in DB:
 ![many-to-many-db.png](resources/many-to-many-db.png)
 
 <br/>
 
-> Object related mapping (ORM) and QuerySets
+> #### `>>>` Object related mapping (ORM) and QuerySets `<<<`
 
 A [QuerySet](https://docs.djangoproject.com/en/dev/ref/models/querysets/) can be constructed, filtered, sliced, and generally passed around without actually hitting the database. No database activity actually occurs until you do something to evaluate the queryset.
 

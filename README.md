@@ -26,7 +26,7 @@ Experienced in:<br/>
 
 Do for fun :P<br/>
 * `Compose electronic music`<br/>
-* `Develop Discord and Telegram bots`<br/>
+* `Manage online communities and make bots to aid in that`<br/>
 * `Ski`<br/>
 * `Warhammer 40k fan`<br/>
 <hr/>
