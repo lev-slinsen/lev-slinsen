@@ -134,6 +134,7 @@ ___
 > #### `>>>` Models `<<<`
 
 Many-to-many relation in DB:
+
 ![many-to-many-db.png](resources/many-to-many-db.png)
 
 <br/>
@@ -167,29 +168,20 @@ ___
 
 <br/>
 
-### APIs
-`REST`  
-`SOAP`  
-`RPC`  
-
 ### Databases
 `SQL vs NoSQL`  
 `Postgres`  
 `Mongo`  
 
-### Network
-`HTTP / HTTPS`  
-`TCP / UDP`  
+### Caching
+`Memcached`  
+`Redis`  
 
 ### Hosting
 `Nginx`  
 `Gunicorn`  
 `Docker`  
 `AWS`  
-
-### Caching
-`Memcached`  
-`Redis`
 
 ### Background tasks
 `Celery`  
@@ -199,3 +191,12 @@ ___
 `Overview`  
 `Git flow`  
 `Typical operations`  
+
+### APIs
+`REST`  
+`SOAP`  
+`RPC`  
+
+### Network
+`HTTP / HTTPS`  
+`TCP / UDP`  
