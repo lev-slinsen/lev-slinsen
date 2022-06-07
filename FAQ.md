@@ -168,34 +168,59 @@ ___
 
 <br/>
 
-### Databases
-`SQL vs NoSQL`  
-`Postgres`  
-`Mongo`  
+> #### `>>>` Databases `<<<`
 
-### Caching
+`Relational databases` model data as records in rows and tables with logical links between them.
+
+`SQL` (*Structured Query Language*) is the programming language used to interface with **relational databases**.
+
+`NoSQL` is a class of DBMs (*Database Management Systems*) that are non-relational and generally do not use SQL, they often use **json-like** structure.
+
+**SQL databases** are vertically scalable, they are slower to fill because of **indexing** but are more reliable and secure.  
+**NoSQL databases** are horizontally scalable, slower to retrieve because are **not indexed**.
+
+> #### `>>>` Caching `<<<`
+
+Caching systems typically are in-memory NoSQL data storages, keeping data as key value pairs.  
+Both memcached and redis support multithreading.
+
 `Memcached`  
+
+- Stores data in strings only. Doesn't allow replication *natively*.
+- Doesn't have built in **data persistance** mechanism.
+- Supports a key of only 250 bytes and values are capped at 1MB *by default*.
+- Evicts data by *Least Recently Used*.
+
 `Redis`  
 
-### Hosting
-`Nginx`  
-`Gunicorn`  
-`Docker`  
-`AWS`  
+- Stores data in [different data types](https://redis.io/docs/manual/data-types/). That allows data replication without having to re-upload the entire data value.
+- Has *optional* [data persistance](https://redis.io/docs/manual/persistence/) mechanism to preserve data between shutdowns.
+  - That is achieved through AOF (Append Only File) logging of all write operations or backup snapshot.
+- Data keys and strings can be up to 512 MB in length.
+- Has several options for [data eviction](https://docs.redis.com/latest/rs/databases/configure/eviction-policy/).
+- Scaling is possible through clusters (Jedis and Redisson) connected over TCP protocol.
+
+`Tarantula` ...
 
 ### Background tasks
 `Celery`  
 `Redis queue`  
 
-### Git
-`Overview`  
-`Git flow`  
-`Typical operations`  
+### Hosting
+`Nginx`  
+`Gunicorn`  
+`Docker`  
+`AWS`
 
 ### APIs
 `REST`  
 `SOAP`  
 `RPC`  
+
+### Git
+`Overview`  
+`Git flow`  
+`Typical operations`  
 
 ### Network
 `HTTP / HTTPS`  
