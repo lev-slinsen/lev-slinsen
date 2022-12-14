@@ -25,6 +25,7 @@ Mutable (can be changed):
 * [Sets](https://www.w3schools.com/python/python_sets.asp) `{}` Collection, unordered, unchangeable (can add/remove), unindexed. No duplicates.
 
 The `index()` method returns the position at the first occurrence of the specified value.
+___
 
 <br/>
 
@@ -37,6 +38,7 @@ Technically, in Python, an iterator is an object which implements the iterator p
 Generator functions use `yield()` instead of `return()`, also `throw()` for errors and `close()` to finish.
 On `yield()` statement, function execution is suspended yielded value returns to the caller but that doesn't stop the function.  
 Using generators on mutable objects saves memory.  
+___
 
 <br/>
 
@@ -55,6 +57,7 @@ multiply_by_two = multiply_by(2)
 
 print(multiply_by_two(11))
 ```
+___
 
 <br/>
 
@@ -75,6 +78,7 @@ def function():
     # action 2
 ```
 calling `function` actually returns `wrapper` of `decorator`.
+___
 
 <br/>
 
@@ -111,6 +115,7 @@ Built in functions (not all, just the most used ones):
 * `__str__(self)` gives a user-friendly representation.
 * `__repr__(self)` gives a developer-friendly representation.
 * `__cmp__(self, x)` compares instance to another object.
+___
 
 <br/>
 
@@ -136,6 +141,7 @@ ___
 Many-to-many relation in DB:
 
 ![many-to-many-db.png](resources/many-to-many-db.png)
+___
 
 <br/>
 
