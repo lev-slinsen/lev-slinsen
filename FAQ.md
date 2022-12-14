@@ -203,8 +203,22 @@ Both memcached and redis support multithreading.
 `Tarantula` ...
 
 ### Background tasks
-`Celery`  
+
+**Queue** - a queue of tasks (functions) waiting for the broker to assign.  
+A separate service called a **message broker** - a solution to send and receive messages (Redis, RabbitMQ).  
+**Workers** are processes that receive tasks from the broker and execute them. 
+
 `Redis queue`  
+- Simple API and easy documentation.
+- Only works with python.
+- Only works with Redis, no other brokers. In case of Redis, it doesn't guarantee data safety.
+- Runs only on Linux.
+
+`Celery`  
+- Broker support allows to exchange tasks with other instances / programs.
+- Runs on any OS.
+- Complex yet flexible API, alot of options.
+- Allows creating subtasks (?)
 
 ### Hosting
 `Nginx`  
