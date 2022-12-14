@@ -202,7 +202,7 @@ Both memcached and redis support multithreading.
 
 `Tarantula` ...
 
-### Background tasks
+> #### `>>>` Background tasks `<<<`
 
 **Queue** - a queue of tasks (functions) waiting for the broker to assign.  
 A separate service called a **message broker** - a solution to send and receive messages (Redis, RabbitMQ).  
@@ -220,22 +220,22 @@ A separate service called a **message broker** - a solution to send and receive 
 - Complex yet flexible API, alot of options.
 - Allows creating subtasks (?)
 
-### Hosting
-`Nginx`  
-`Gunicorn`  
-`Docker`  
-`AWS`
+[//]: # (### Hosting)
+[//]: # (`Nginx`  )
+[//]: # (`Gunicorn`  )
+[//]: # (`Docker`  )
+[//]: # (`AWS`)
 
-### APIs
-`REST`  
-`SOAP`  
-`RPC`  
+[//]: # (### APIs)
+[//]: # (`REST`  )
+[//]: # (`SOAP`  )
+[//]: # (`RPC`  )
 
-### Git
-`Overview`  
-`Git flow`  
-`Typical operations`  
+[//]: # (### Git)
+[//]: # (`Overview`  )
+[//]: # (`Git flow`  )
+[//]: # (`Typical operations`  )
 
-### Network
-`HTTP / HTTPS`  
-`TCP / UDP`  
+[//]: # (### Network)
+[//]: # (`HTTP / HTTPS`  )
+[//]: # (`TCP / UDP`  )
