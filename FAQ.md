@@ -178,6 +178,9 @@ ___
 
 **SQL databases** are vertically scalable, they are slower to fill because of **indexing** but are more reliable and secure.  
 **NoSQL databases** are horizontally scalable, slower to retrieve because are **not indexed**.
+___
+
+<br/>
 
 > #### `>>>` Caching `<<<`
 
@@ -201,6 +204,9 @@ Both memcached and redis support multithreading.
 - Scaling is possible through clusters (Jedis and Redisson) connected over TCP protocol.
 
 `Tarantula` ...
+___
+
+<br/>
 
 > #### `>>>` Background tasks `<<<`
 
@@ -219,6 +225,9 @@ A separate service called a **message broker** - a solution to send and receive 
 - Runs on any OS.
 - Complex yet flexible API, alot of options.
 - Allows creating subtasks (?)
+___
+
+<br/>
 
 [//]: # (### Hosting)
 [//]: # (`Nginx`  )
