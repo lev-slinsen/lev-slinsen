@@ -42,7 +42,7 @@ Getting a list of files as a single zip
 ```
 ### Testing
 
-Pytest (class based):
+Class based:
 ```python
 from django.urls import reverse
 from rest_framework.test import APITestCase
@@ -107,4 +107,16 @@ class TestAcceptStatement(ApiTest):
 
         self.assertEqual(res.status_code, 400)
         self.assertEqual(res.data, {'error': {'message': 'object does not belong to the user'}})
+```
+___
+Method based:
+```python
+@pytest.fixture(autouse=True)
+def run_around_tests():
+    assert False    # setUp
+    yield           # tests
+    assert False    # teardown
+
+def test():
+    assert False
 ```
