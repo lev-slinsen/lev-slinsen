@@ -12,6 +12,14 @@ from django.utils import timezone
 now = timezone.now()
 ```
 ### Models
+Utility for created and updated fields
+```python
+from django.db import models
+
+class CreatedUpdated(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+```
 Getting a list of files as a single zip
 ```python
     @property
