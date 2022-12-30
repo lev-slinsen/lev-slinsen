@@ -12,6 +12,20 @@ from django.utils import timezone
 now = timezone.now()
 ```
 ### Models
+Signals  
+https://docs.djangoproject.com/en/dev/ref/signals/
+```python
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
+
+
+@receiver(pre_save, sender=Order)
+def valid_order(sender, instance, **kwargs):
+    inventory_item = Inventory.objects.get(id=instance.inventory_item.id)
+
+    if instance.quantity > inventory_item.quantity:
+        raise Exception("There are not enough items in the inventory.")
+```
 Utility for created and updated fields
 ```python
 from django.db import models
