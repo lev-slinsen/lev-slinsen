@@ -120,11 +120,19 @@ ___
 Method based:
 ```python
 @pytest.fixture(autouse=True)
-def run_around_tests():
-    assert False    # setUp
-    yield           # tests
-    assert False    # teardown
+def api_test(db):
+    # Setup
+    user_1 = User.objects.create(username="username", password="1234qwer")
 
-def test():
-    assert False
+    # # # #
+    yield  #
+    # # # #
+
+    # Breakdown
+    assert True
+
+
+def test(db):
+    # breakpoint()
+    assert True
 ```
