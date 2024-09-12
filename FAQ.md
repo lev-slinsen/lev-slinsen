@@ -66,14 +66,15 @@ ___
 A [decorator](https://realpython.com/primer-on-python-decorators/) is a function that takes another function and extends the behavior of the latter function without explicitly modifying it.
 
 ```py
-def decorator(func):
-    def wrapper():
+def decorator_title(method):
+    def decorator(*args, **kwargs):  # Best to specify arguments
         # action 1
         function()
         # action 3
-    return wrapper
+        return method(view, request)
+    return decorator
 
-@decorator
+@decorator_title
 def function():
     # action 2
 ```
