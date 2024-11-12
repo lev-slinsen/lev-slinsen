@@ -24,7 +24,7 @@ Do for fun :P<br/>
 ```python
 # If you would like to contact me
 def contacts():
-    email = 'lev_slinsen@protonmail.com'
+    email = 'lev_the_python_dev@pm.me'
     telegram = '@lev_slinsen'
     # yes, I know I'm a nerd -_-
 ```
