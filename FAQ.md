@@ -236,6 +236,17 @@ ___
 
 <br/>
 
+> #### `>>>` OOP `<<<`
+
+`Key Concepts of OOP`
+- Encapsulation: Encapsulation involves bundling the data (attributes) and the methods (functions) that operate on the data into a single unit, or class. This hides the internal state of the object from the outside world, exposing only what is necessary.
+- Abstraction: Abstraction focuses on exposing only the relevant attributes and behaviors of an object while hiding the unnecessary details. This simplifies complex systems by modeling classes based on real-world entities.
+- Inheritance: Inheritance allows a new class, known as a subclass, to inherit attributes and methods from an existing class, known as a superclass. This promotes code reuse and establishes a hierarchical relationship between classes.
+- Polymorphism: Polymorphism enables objects to be treated as instances of their parent class, allowing for dynamic method binding. This means that a single function can operate on different types of objects.
+___
+
+<br/>
+
 [//]: # (### Hosting)
 [//]: # (`Nginx`  )
 [//]: # (`Gunicorn`  )
